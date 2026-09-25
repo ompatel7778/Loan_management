@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #050905;
+    --bg-card: rgba(10, 20, 10, 0.85);
+    --bg-card-subtle: rgba(15, 30, 15, 0.6);
+    --border-card: rgba(163, 230, 53, 0.2);
+    --border-hover: rgba(163, 230, 53, 0.5);
+    --text-main: #f8fafc;
+    --text-sub: #94a3b8;
+    --primary: #a3e635;
+    --secondary: #10b981;
+    --accent: #facc15;
+    --primary-glow: rgba(163, 230, 53, 0.4);
+    --secondary-glow: rgba(16, 185, 129, 0.25);
+    --primary-gradient: linear-gradient(135deg, #a3e635, #10b981, #059669);
+  }
+
+  /* Theme 1: Viper Acid (Acid Lime & Neon Emerald) */
+  [data-theme="viper"] {
+    --bg-main: #050905;
+    --bg-card: rgba(12, 24, 14, 0.85);
+    --bg-card-subtle: rgba(18, 36, 20, 0.6);
+    --border-card: rgba(163, 230, 53, 0.25);
+    --border-hover: rgba(163, 230, 53, 0.6);
+    --text-main: #f8fafc;
+    --text-sub: #94a3b8;
+    --primary: #a3e635;
+    --secondary: #10b981;
+    --accent: #facc15;
+    --primary-glow: rgba(163, 230, 53, 0.4);
+    --secondary-glow: rgba(16, 185, 129, 0.25);
+    --primary-gradient: linear-gradient(135deg, #a3e635, #10b981, #059669);
+  }
+
+  /* Theme 2: Nordic Aurora (Ice Teal & Borealis Blue) */
+  [data-theme="nordic"] {
+    --bg-main: #060d19;
+    --bg-card: rgba(10, 25, 45, 0.85);
+    --bg-card-subtle: rgba(15, 35, 60, 0.6);
+    --border-card: rgba(56, 189, 248, 0.25);
+    --border-hover: rgba(56, 189, 248, 0.6);
+    --text-main: #f0f9ff;
+    --text-sub: #94a3b8;
+    --primary: #38bdf8;
+    --secondary: #2dd4bf;
+    --accent: #c084fc;
+    --primary-glow: rgba(56, 189, 248, 0.4);
+    --secondary-glow: rgba(45, 212, 191, 0.25);
+    --primary-gradient: linear-gradient(135deg, #38bdf8, #2dd4bf, #0284c7);
+  }
+
+  /* Theme 3: Industrial Titanium (Blaze Orange & Matte Carbon) */
+  [data-theme="titanium"] {
+    --bg-main: #0d0e10;
+    --bg-card: rgba(22, 24, 28, 0.85);
+    --bg-card-subtle: rgba(30, 33, 38, 0.6);
+    --border-card: rgba(255, 87, 34, 0.25);
+    --border-hover: rgba(255, 87, 34, 0.6);
+    --text-main: #fafafa;
+    --text-sub: #a1a1aa;
+    --primary: #ff5722;
+    --secondary: #ffb300;
+    --accent: #00e676;
+    --primary-glow: rgba(255, 87, 34, 0.4);
+    --secondary-glow: rgba(255, 179, 0, 0.25);
+    --primary-gradient: linear-gradient(135deg, #ff5722, #ff8f00, #d84315);
+  }
+
+  /* Theme 4: Tokyo Synthwave (Hot Fuchsia & Neon Turquoise) */
+  [data-theme="synthwave"] {
+    --bg-main: #120216;
+    --bg-card: rgba(28, 8, 36, 0.85);
+    --bg-card-subtle: rgba(40, 12, 52, 0.6);
+    --border-card: rgba(244, 63, 94, 0.25);
+    --border-hover: rgba(0, 240, 255, 0.6);
+    --text-main: #fff1f2;
+    --text-sub: #cbd5e1;
+    --primary: #f43f5e;
+    --secondary: #00f0ff;
+    --accent: #e0e7ff;
+    --primary-glow: rgba(244, 63, 94, 0.4);
+    --secondary-glow: rgba(0, 240, 255, 0.3);
+    --primary-gradient: linear-gradient(135deg, #f43f5e, #c026d3, #00f0ff);
+  }
+
+  /* Theme 5: Frost Glass Light (Crisp White & Royal Indigo) */
+  [data-theme="frost"] {
+    --bg-main: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.92);
+    --bg-card-subtle: rgba(241, 245, 249, 0.8);
+    --border-card: rgba(79, 70, 229, 0.2);
+    --border-hover: rgba(79, 70, 229, 0.5);
+    --text-main: #0f172a;
+    --text-sub: #475569;
+    --primary: #4f46e5;
+    --secondary: #0284c7;
+    --accent: #0d9488;
+    --primary-glow: rgba(79, 70, 229, 0.25);
+    --secondary-glow: rgba(2, 132, 199, 0.2);
+    --primary-gradient: linear-gradient(135deg, #4f46e5, #0284c7, #2563eb);
+  }
+
+  /* Theme 6: Blood Moon (Crimson Eclipse & Velvet Dark) */
+  [data-theme="bloodmoon"] {
+    --bg-main: #0f0507;
+    --bg-card: rgba(25, 10, 14, 0.85);
+    --bg-card-subtle: rgba(35, 15, 20, 0.6);
+    --border-card: rgba(239, 68, 68, 0.25);
+    --border-hover: rgba(239, 68, 68, 0.6);
+    --text-main: #fff1f2;
+    --text-sub: #94a3b8;
+    --primary: #ef4444;
+    --secondary: #f97316;
+    --accent: #fb7185;
+    --primary-glow: rgba(239, 68, 68, 0.4);
+    --secondary-glow: rgba(249, 115, 22, 0.25);
+    --primary-gradient: linear-gradient(135deg, #ef4444, #dc2626, #f97316);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    background-image: 
+      radial-gradient(at 0% 0%, var(--primary-glow) 0px, transparent 45%),
+      radial-gradient(at 100% 0%, var(--secondary-glow) 0px, transparent 45%),
+      radial-gradient(at 50% 100%, var(--primary-glow) 0px, transparent 50%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+}
+
+/* Glassmorphism Panel using dynamic CSS variables */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 40px 0 var(--primary-glow);
+}
+
+.glass-card {
+  background: var(--bg-card-subtle);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-card);
+  transition: all 0.25s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.theme-button-primary {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px var(--primary-glow);
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+}
+
+.theme-button-primary:hover {
+  transform: scale(1.02);
+  filter: brightness(1.15);
+}
+
+.theme-text-accent {
+  color: var(--primary);
+  text-shadow: 0 0 12px var(--primary-glow);
+}
+
+.theme-border-accent {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Background Grid Pattern */
+.bg-cyber-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(125, 125, 125, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(125, 125, 125, 0.05) 1px, transparent 1px);
+}
+
+/* Scanner Animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* Pulsing Glow */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Custom Range Inputs */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--bg-card-subtle);
+  border-radius: 9999px;
+  height: 8px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--primary-glow);
+  border: 2px solid #ffffff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 20px var(--primary);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-card);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

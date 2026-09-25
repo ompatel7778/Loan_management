@@ -1,0 +1,25 @@
+services:
+  # 1. Full-Stack Web Service (Flask API + Embedded React UI)
+  - type: web
+    name: loanguard-ml-platform
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn backend.app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+
+  # 2. Static Site Service (Standalone React Frontend)
+  - type: static
+    name: loanguard-ml-frontend
+    env: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: "./frontend/dist"
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: loanguard-ml-platform
+          property: host
