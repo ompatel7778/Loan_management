@@ -4,6 +4,7 @@ frontend/node_modules/
 
 # Production build outputs
 frontend/dist/
+.vercel/
 
 # Python cache & virtual environments
 __pycache__/
@@ -14,6 +15,14 @@ backend/__pycache__/
 .venv/
 venv/
 env/
+
+# Jupyter & Notebook Checkpoints
+.ipynb_checkpoints/
+.virtual_documents/
+anaconda_projects/
+
+# Large Datasets (Trained model files are kept in backend/)
+*.csv
 
 # IDE / OS files
 .DS_Store
