@@ -8,9 +8,19 @@ import BatchSimulator from './components/BatchSimulator';
 import { predictInBrowser } from './utils/mlEngine';
 import { sounds } from './utils/soundEngine';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
-  ? (import.meta.env.VITE_API_BASE_URL.endsWith('/api') ? import.meta.env.VITE_API_BASE_URL : `${import.meta.env.VITE_API_BASE_URL}/api`)
-  : (window.location.hostname === 'localhost' ? 'http://localhost:5000/api' : '/api');
+const getApiBaseUrl = () => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (envUrl) {
+    let cleanUrl = envUrl.trim();
+    if (!cleanUrl.startsWith('http://') && !cleanUrl.startsWith('https://') && !cleanUrl.startsWith('/')) {
+      cleanUrl = `https://${cleanUrl}`;
+    }
+    return cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`;
+  }
+  return window.location.hostname === 'localhost' ? 'http://localhost:5000/api' : '/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 
 const DEFAULT_FORM_DATA = {

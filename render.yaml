@@ -2,10 +2,10 @@ services:
   # 1. Full-Stack Web Service (Flask API + Embedded React UI)
   - type: web
     name: loanguard-ml-platform
-    env: python
+    runtime: python
     region: singapore
     plan: free
-    buildCommand: "./build.sh"
+    buildCommand: "bash build.sh"
     startCommand: "gunicorn backend.app:app"
     envVars:
       - key: PYTHON_VERSION
@@ -14,7 +14,7 @@ services:
   # 2. Static Site Service (Standalone React Frontend)
   - type: static
     name: loanguard-ml-frontend
-    env: static
+    runtime: static
     buildCommand: "cd frontend && npm install && npm run build"
     staticPublishPath: "./frontend/dist"
     envVars:
@@ -23,3 +23,4 @@ services:
           type: web
           name: loanguard-ml-platform
           property: host
+
