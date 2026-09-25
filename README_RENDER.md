@@ -40,7 +40,7 @@ If you prefer setting up manually without Blueprint:
    - **Environment**: `Python 3`
    - **Region**: Select closest to your users
    - **Branch**: `main`
-   - **Build Command**: `./build.sh`
+   - **Build Command**: `bash build.sh`
    - **Start Command**: `gunicorn backend.app:app`
 4. Click **"Create Web Service"**.
 

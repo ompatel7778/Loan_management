@@ -1,5 +1,5 @@
-from backend.app import app
-client = app.test_client()
+from backend.app import app as flask_app
+client = flask_app.test_client()
 res = client.get('/api/health')
 print('Health:', res.json)
 samples = client.get('/api/samples').json

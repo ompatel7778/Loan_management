@@ -67,6 +67,8 @@ def encode_input(data):
     feature_vector = [row[f] for f in feature_names]
     return np.array([feature_vector]), row
 
+@app.route('/api', methods=['GET'])
+@app.route('/api/', methods=['GET'])
 @app.route('/api/health', methods=['GET'])
 def health():
     return jsonify({
